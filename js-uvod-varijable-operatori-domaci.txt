@@ -1,0 +1,16 @@
+***** JS VARIABLES & OPERATORS HOMEWORK *****
+
+
+WHAT SHOULD YOU DO ?
+
+TASK 1 :
+
+Peter has 3500$, and Jim has 5000$, print if Peter has more money than Jim (console log result, true of false)
+
+TASK 2 :
+
+John is 38 years old. In 8 years John will be two times older than Mike. How old is Mike now (console log result)
+
+TASK 3 :
+
+There are 78 birds in a first flock, and 57 birds in a second flock. 12 birds decided to move from the first flock to the second flock, and then 4 birds left second flock. Is the first flock larger or equal to the second one ? (console log result, true or false)
