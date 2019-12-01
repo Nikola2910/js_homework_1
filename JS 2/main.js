@@ -17,6 +17,8 @@ if (a > b && a > c && a > d && a > e) {
   console.log(d + " is the largest number.");
 } else if (e > a && e > b && e > c && e > d) {
   console.log(e + " is the largest number.");
+} else {
+  console.log("There are 2 or more same largest numbers.");
 }
 
 //TASK 2
@@ -56,6 +58,9 @@ switch (language) {
   //break;
   case "French":
     console.log("Bonjour le Monde!");
+    break;
+  default:
+    console.log("Language not supported.");
 }
 
 //TASK 4
