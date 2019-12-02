@@ -14,7 +14,7 @@ var dataOld = [34, true, "Peter", 1992];
 var dataNew = [];
 
 for (var i = 0; i < dataOld.length; i++) {
-  dataNew[i] = dataOld[dataOld.length - i - 1];
+  dataNew[i] = dataOld[dataOld.length - 1 - i];
 }
 console.log(dataNew);
 
@@ -22,9 +22,11 @@ console.log(dataNew);
 
 var dataOld = [34, true, "Peter", 1992];
 var dataNew = [12, "Jack"];
+var dataNewLength = dataNew.length;
+var totalLength = dataOld.length + dataNew.length;
 
-for (var i = 2; i < 6; i++) {
-  dataNew[i] = dataOld[i - 2];
+for (var i = dataNew.length; i < totalLength; i++) {
+  dataNew[i] = dataOld[i - dataNewLength];
 }
 console.log(dataNew);
 
@@ -38,8 +40,8 @@ for (var i = 0; i < a.length; i++) {
   c[i] = a[i];
 }
 
-for (var i = 5; i < 8; i++) {
-  c[i] = b[i - 5];
+for (var i = a.length; i < a.length + b.length; i++) {
+  c[i] = b[i - a.length];
 }
 console.log(c);
 
@@ -60,14 +62,28 @@ console.log(c);
 
 //TASK 6
 
-var myArray = ["*"];
+var myPattern = "";
 
-var myPattern = [];
-
-for (var i = 0; i < 7; i++) {
-  myPattern[i] = myArray[i - i];
-
+for (var i = 0; i < 6; i++) {
+  myPattern += "*";
   console.log(myPattern);
 }
 
 //TASK 7
+
+var final = "";
+var rows = 6;
+var cols = 10;
+
+for (var i = 0; i < rows; i++) {
+  for (var j = 0; j < cols; j++) {
+    if (j > 0 && j < 9 && i > 0 && i < 5) {
+      final += " ";
+    } else {
+      final += "*";
+    }
+  }
+  final += "\n";
+}
+
+console.log(final);
