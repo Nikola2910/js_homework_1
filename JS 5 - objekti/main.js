@@ -24,7 +24,7 @@ var person_two = {
 };
 
 function checkChildrenProperty(someParent) {
-  if (someParent.hasOwnProperty("children") == false) {
+  if (!someParent.hasOwnProperty("children")) {
     someParent.children = [
       { name: "Michael", age: 3, gender: "male" },
       { name: "Jenny", age: 5, gender: "female" }
@@ -57,10 +57,12 @@ var students = [
 
 function didStudentPass(listOfStudents) {
   for (var i = 0; i < listOfStudents.length; i++) {
-    if (listOfStudents[i].passed == true) {
-      console.log(listOfStudents[i].name + " passed exam.");
+    var student = listOfStudents[i];
+
+    if (student.passed) {
+      console.log(student.name + " passed exam.");
     } else {
-      console.log(listOfStudents[i].name + " didn't pass exam.");
+      console.log(student.name + " didn't pass exam.");
     }
   }
 }
@@ -92,9 +94,10 @@ function repackData(students) {
   var years = [];
   var pass = [];
   for (var i = 0; i < students.length; i++) {
-    names[i] = students[i].name;
-    years[i] = students[i].age;
-    pass[i] = students[i].passed;
+    var student = students[i];
+    names[i] = student.name;
+    years[i] = student.age;
+    pass[i] = student.passed;
   }
   console.log(names, years, pass);
 }
@@ -119,7 +122,7 @@ var person = {
   age: 28,
   married: true,
 
-  showNameAndAge: function(thisObject) {
+  showNameAndAge: function() {
     console.log(this.name, this.age);
   }
 };
