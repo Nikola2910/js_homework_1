@@ -82,7 +82,7 @@ function Operation(numOne, numTwo, operation) {
   this.firstNumber = numOne;
   this.secondNumber = numTwo;
   this.result = function() {
-    return operation(numOne, numTwo);
+    return operation(this.firstNumber, this.secondNumber);
   };
 }
 
